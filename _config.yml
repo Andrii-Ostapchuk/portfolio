@@ -1,4 +1,4 @@
 theme: jekyll-theme-minimal
 title: Data Analytics Portfolio
-logo: assets/photos/avatar.png
+logo: /assets/photos/avatar.png
 description: End-to-end case studies in SQL, Power BI, and Python.
