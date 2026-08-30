@@ -98,6 +98,8 @@ The business has a stable foundation to scale marketing and retention on — gro
 
 Across the full dataset period, new customer sign-ups climbed consistently without dramatic spikes or crashes — a sign of organic, sustainable growth rather than short-lived marketing bursts.
 
+
+
 <div style="margin-bottom: 50px;"></div>
 
 #### <a id="insight-2"></a>Insight 2: Two Seasonal Growth Windows
