@@ -94,70 +94,68 @@ The warehouse follows a **Medallion Architecture** — four schemas, each with a
 #### Insight 1: Steady, Organic Customer Growth
 The business has a stable foundation to scale marketing and retention on — growth isn't a fluke or a one-off spike.
 
-| | |
-|---|---|
-| **Quantified Value** | Total Customers: 94.74K, Average MoM Growth: 9.87% |
-| **Business Metric** | Customer Acquisition Rate (daily new customers + cumulative growth) |
+**Quantified Value:** Total Customers: 94.74K, Average MoM Growth: 9.87%<br>
+**Business Metric:** Customer Acquisition Rate (daily new customers + cumulative growth)
 
 Across the full dataset period, new customer sign-ups climbed consistently without dramatic spikes or crashes — a sign of organic, sustainable growth rather than short-lived marketing bursts.
+
+---
 
 #### Insight 2: Two Seasonal Growth Windows
 These windows are the best times to plan inventory, seller capacity, and marketing spend.
 
-| | |
-|---|---|
-| **Quantified Value** | MoM growth ranges from 35% to 120% across the top 5 categories in each window |
-| **Business Metric** | Month-over-Month revenue growth, top 5 historical categories |
+**Quantified Value:** MoM growth ranges from 35% to 120% across the top 5 categories in each window<br>
+**Business Metric:** Month-over-Month revenue growth, top 5 historical categories
 
 Twice a year, revenue growth for the leading categories accelerates: once mid-year (**May–Jul**) and once around the holidays (**Nov–Jan**) — a repeatable seasonal pattern worth building the calendar around.
+
+<hr style="border: none; height: 3px; background-color: #d0d7de; margin: 48px 0;">
 
 ### 🚚 Logistics & Delivery
 
 #### Insight 3: Summer Shipping Costs Spike, and It's Category-Driven
 A handful of bulky/heavy categories are scoring higher freight-to-price ratios every summer.
 
-| | |
-|---|---|
-| **Quantified Value** | Freight-to-price ratio **> 0.18** during summer months |
-| **Business Metric** | Freight-to-Price ratio, 30-day rolling average |
+**Quantified Value:** Freight-to-price ratio **> 0.18** during summer months<br>
+**Business Metric:** Freight-to-Price ratio, 30-day rolling average
 
 Every summer, shipping costs climb relative to item price, and it's disproportionately driven by `bed_bath_table`, `health_beauty`, and `furniture_decor` — categories that are either heavy, bulky, or both.
 
-#### Insight 4: Delivery Delays Are the Biggest Threat to Satisfaction
+---
+
+#### Insight 9: Delivery Delays Are the Biggest Threat to Satisfaction
 On-time delivery is likely the single highest-leverage fix for review scores — bigger than product or price.
 
-| | |
-|---|---|
-| **Quantified Value** | Average review score, on-time: **4.0**; delayed: **2.5** |
-| **Business Metric** | Review score vs. delivery delay (actual vs. estimated delivery date) |
+**Quantified Value:** Average review score, on-time: **4.0**; delayed: **2.5**<br>
+**Business Metric:** Review score vs. delivery delay (actual vs. estimated delivery date)
 
 When an order arrives later than promised, satisfaction doesn't just dip — it drops sharply. Delivery reliability outweighs almost every other factor tested against review scores.
 
+<hr style="border: none; height: 3px; background-color: #d0d7de; margin: 48px 0;">
+
 ### 💳 Payments
 
-#### Insight 5: Credit Card Wins Nationally — With One Curious Regional Exception
+#### Insight 4: Credit Card Wins Nationally — With One Curious Regional Exception
 The RR pattern is interesting but too small to act on — flagging it for visibility, not for a business decision.
 
-| | |
-|---|---|
-| **Quantified Value** | Credit card is by far the most popular payment method across all states (**> 65%**). Boleto is a solid runner-up (**> 13%**). RR (Roraima) has the highest boleto share (**32%**) but represents only **0.05%** of all orders |
-| **Business Metric** | Payment type share by customer state |
+**Quantified Value:** Credit card is by far the most popular payment method across all states (**> 65%**). Boleto is a solid runner-up (**> 13%**). RR (Roraima) has the highest boleto share (**32%**) but represents only **0.05%** of all orders<br>
+**Business Metric:** Payment type share by customer state
 
 Credit card is the dominant payment method across almost every state. RR stands out with boleto as its top method and zero debit-card or voucher usage — but with so few orders, this is a curiosity, not a trend.
 
+<hr style="border: none; height: 3px; background-color: #d0d7de; margin: 48px 0;">
+
 ### 🏪 Sellers
 
-#### Insight 6: More Volume, More "Needs Improvement" — But Fewer "Bad" Reviews
+#### Insight 5: More Volume, More "Needs Improvement" — But Fewer "Bad" Reviews
 In plain terms: the more orders a seller handles, the more "just okay" reviews they collect — but far fewer truly bad ones. More volume brings more average experiences, not more terrible ones, and that's worth understanding before deciding whether — or how — to fix it.
 
-| | |
-|---|---|
-| **Quantified Value** | "Needs Improvement" share rises with volume (23% → 38%), while "Bad" share falls (13% → 1%) |
-| **Business Metric** | Seller Volume × Review Score quadrant (High/Medium/Low volume × Excellent/Needs Improvement/Bad) |
+**Quantified Value:** "Needs Improvement" share rises with volume (23% → 38%), while "Bad" share falls (13% → 1%)<br>
+**Business Metric:** Seller Volume × Review Score quadrant (High/Medium/Low volume × Excellent/Needs Improvement/Bad)
 
 As sellers handle more orders, the share of merely "needs improvement" reviews rises — but, surprisingly, the share of outright "bad" reviews falls. **Open question: why?** (See Caveats.)
 
-<details>
+<details markdown="1">
 <summary>Full breakdown by volume tier (click to expand)</summary>
 
 | Volume Tier | Needs Improvement | Bad |
@@ -168,17 +166,17 @@ As sellers handle more orders, the share of merely "needs improvement" reviews r
 
 </details>
 
-#### Insight 7: Half the Seller Base Is a Growth Opportunity Waiting to Happen
+---
+
+#### Insight 6: Half the Seller Base Is a Growth Opportunity Waiting to Happen
 "Cooling Off" sellers are the fastest path to more Leaders; "Recovering" and "Underperforming" sellers are the biggest lever for overall platform revenue.
 
-| | |
-|---|---|
-| **Quantified Value** | Cooling Off sellers are **2x** as numerous as Leaders (with slightly higher avg sales); Recovering + Underperforming make up **~50%** of sellers with **60%+ lower** average sales |
-| **Business Metric** | Seller Performance tiers — Avg Sales (AS) by tier (Growth Leader, Cooling Off, Recovering, Underperforming) |
+**Quantified Value:** Cooling Off sellers are **2x** as numerous as Leaders (with slightly higher avg sales); Recovering + Underperforming make up **~50%** of sellers with **60%+ lower** average sales<br>
+**Business Metric:** Seller Performance tiers — Avg Sales (AS) by tier (Growth Leader, Cooling Off, Recovering, Underperforming)
 
 Leader sellers give the platform a solid revenue base. Cooling Off sellers already perform nearly as well and are numerous — a natural pipeline into the Leader tier. Recovering and Underperforming sellers make up half the base by count but contribute far less revenue each — the single biggest opportunity to lift overall platform sales.
 
-<details>
+<details markdown="1">
 <summary>How seller tiers are defined (click to expand)</summary>
 
 Every seller is scored on two simple questions: is their average sale size above or below their own lifetime average, and is their sales trend this month better or worse than last month?
@@ -193,19 +191,19 @@ Every seller is scored on two simple questions: is their average sale size above
 
 </details>
 
+<hr style="border: none; height: 3px; background-color: #d0d7de; margin: 48px 0;">
+
 ### 👥 Customers
 
-#### Insight 8: The Customer Base Is Skewed Toward Risk
+#### Insight 7: The Customer Base Is Skewed Toward Risk
 Retention — not just acquisition — needs to be the priority, because most of the "next tier" of customers are disengaged, not loyal.
 
-| | |
-|---|---|
-| **Quantified Value** | New Customers: 31%, Cannot Lose Them: 18%, Lost: 16%, At Risk: 15%, Low Value/Promising: 8%, Champions: 1.9%, Loyal: 1.2% (rounded) |
-| **Business Metric** | RFM Segmentation (Recency, Frequency, Monetary) |
+**Quantified Value:** New Customers: 31%, Cannot Lose Them: 18%, Lost: 16%, At Risk: 15%, Low Value/Promising: 8%, Champions: 1.9%, Loyal: 1.2% (rounded)<br>
+**Business Metric:** RFM Segmentation (Recency, Frequency, Monetary)
 
 New customers form the largest group — but the next three largest are **Cannot Lose Them**, **Lost**, and **At Risk**, not repeat loyal buyers. The base is fragile, and losing these segments would hurt more than the new-customer pipeline can offset.
 
-<details>
+<details markdown="1">
 <summary>RFM segment reference (click to expand)</summary>
 
 | Segment | Criteria | Profile | Recommended Action |
@@ -217,25 +215,25 @@ New customers form the largest group — but the next three largest are **Cannot
 
 </details>
 
+<hr style="border: none; height: 3px; background-color: #d0d7de; margin: 48px 0;">
+
 ### 🌎 Revenue & Geography
 
-#### Insight 9: Cross-State Sales Are the Real Revenue Engine
+#### Insight 8: Cross-State Sales Are the Real Revenue Engine
 Olist's core value proposition is connecting customers with sellers *outside* their home state — logistics for this needs to stay a strength, not a weakness.
 
-| | |
-|---|---|
-| **Quantified Value** | **70%** of total revenue comes from cross-state orders |
-| **Business Metric** | Revenue split — cross-state vs. in-state (customer state vs. seller state) |
+**Quantified Value:** **70%** of total revenue comes from cross-state orders<br>
+**Business Metric:** Revenue split — cross-state vs. in-state (customer state vs. seller state)
 
 Most purchases aren't local — customers are routinely buying from sellers in a different state, making cross-state logistics a core (not peripheral) part of the business model.
+
+---
 
 #### Insight 10: The Highest-Value Order Profile Is Very Specific
 This is a small but extremely valuable customer profile worth understanding and replicating — not a coincidence.
 
-| | |
-|---|---|
-| **Quantified Value** | This profile represents **12%** of Total Net Revenue |
-| **Business Metric** | Total Net Revenue by delivery-speed × cross-state × customer segment × installment count |
+**Quantified Value:** This profile represents **12%** of Total Net Revenue<br>
+**Business Metric:** Total Net Revenue by delivery-speed × cross-state × customer segment × installment count
 
 The single biggest source of net revenue is orders that arrive **6+ days early**, ship **cross-state**, are placed by **Cannot Lose Them** customers, and are paid in **7+ installments** — a specific, high-value combination worth targeting directly.
 
