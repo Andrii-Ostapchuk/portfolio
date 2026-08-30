@@ -69,13 +69,13 @@ The warehouse follows a **Medallion Architecture** — four schemas, each with a
 
 ## 3. Executive Summary
 
->Olist's marketplace is growing steadily, but revenue is concentrated in a specific customer/logistics profile, and both the customer base and the seller base show a 'long tail' of accounts at risk of disengaging.
+> Olist's marketplace is growing steadily, but revenue is concentrated in a specific customer/logistics profile, and both the customer base and the seller base show a 'long tail' of accounts at risk of disengaging.
 
 **Headline numbers:**
 
 | Metric | Finding |
 |---|---|
-| Customer growth | Steady, organic — no major spikes or drops [add: total customers / avg growth rate] |
+| Customer growth | Steady, organic — **94.74K** total customers acquired, averaging **9.87%** MoM growth |
 | Seasonal peaks | Category revenue accelerates **May–Jul** and **Nov–Jan** |
 | Logistics cost | Freight-to-price ratio rises every **summer**, driven by bulky categories |
 | Payment mix | **Credit card** dominates nationally; Boleto is runner-up |
@@ -96,80 +96,114 @@ The business has a stable foundation to scale marketing and retention on — gro
 
 | | |
 |---|---|
-| **Quantified Value** | Total Customers: 94.74K | Average MoM Growth: 9.87% |
+| **Quantified Value** | Total Customers: 94.74K, Average MoM Growth: 9.87% |
 | **Business Metric** | Customer Acquisition Rate (daily new customers + cumulative growth) |
-| Across the full dataset period, new customer sign-ups climbed consistently without dramatic spikes or crashes — a sign of organic, sustainable growth rather than short-lived marketing bursts. |
+
+Across the full dataset period, new customer sign-ups climbed consistently without dramatic spikes or crashes — a sign of organic, sustainable growth rather than short-lived marketing bursts.
 
 #### Insight 2: Two Seasonal Growth Windows
 These windows are the best times to plan inventory, seller capacity, and marketing spend.
 
 | | |
 |---|---|
-| **Quantified Value** | MoM growth from 35% to 120% in each window for the top 5 categories] |
+| **Quantified Value** | MoM growth ranges from 35% to 120% across the top 5 categories in each window |
 | **Business Metric** | Month-over-Month revenue growth, top 5 historical categories |
-| Twice a year, revenue growth for the leading categories accelerates: once mid-year (**May–Jul**) and once around the holidays (**Nov–Jan**) — a repeatable seasonal pattern worth building the calendar around. |
+
+Twice a year, revenue growth for the leading categories accelerates: once mid-year (**May–Jul**) and once around the holidays (**Nov–Jan**) — a repeatable seasonal pattern worth building the calendar around.
 
 ### 🚚 Logistics & Delivery
 
 #### Insight 3: Summer Shipping Costs Spike, and It's Category-Driven
-A handful of bulky/heavy categories are scoring higher freight to price ratios every summer.
+A handful of bulky/heavy categories are scoring higher freight-to-price ratios every summer.
 
 | | |
 |---|---|
-| **Quantified Value** | Freight-to-price ratio **> 0.18** during summer months. |
+| **Quantified Value** | Freight-to-price ratio **> 0.18** during summer months |
 | **Business Metric** | Freight-to-Price ratio, 30-day rolling average |
-| Every summer, shipping costs climb relative to item price, and it's disproportionately driven by `bed_bath_table`, `health_beauty`, and `furniture_decor` — categories that are either heavy, bulky, or both. |
 
-#### Insight 9: Delivery Delays Are the Biggest Threat to Satisfaction
+Every summer, shipping costs climb relative to item price, and it's disproportionately driven by `bed_bath_table`, `health_beauty`, and `furniture_decor` — categories that are either heavy, bulky, or both.
+
+#### Insight 4: Delivery Delays Are the Biggest Threat to Satisfaction
 On-time delivery is likely the single highest-leverage fix for review scores — bigger than product or price.
 
 | | |
 |---|---|
-| **Quantified Value** | Average Review Score for on-time: 4.0; Average Review Score for delayed orders: 2.5 |
+| **Quantified Value** | Average review score, on-time: **4.0**; delayed: **2.5** |
 | **Business Metric** | Review score vs. delivery delay (actual vs. estimated delivery date) |
-| When an order arrives later than promised, satisfaction doesn't just dip — it drops sharply. Delivery reliability outweighs almost every other factor tested against review scores. |
+
+When an order arrives later than promised, satisfaction doesn't just dip — it drops sharply. Delivery reliability outweighs almost every other factor tested against review scores.
 
 ### 💳 Payments
 
-#### Insight 4: Credit Card Wins Nationally — With One Curious Regional Exception
+#### Insight 5: Credit Card Wins Nationally — With One Curious Regional Exception
 The RR pattern is interesting but too small to act on — flagging it for visibility, not for a business decision.
 
 | | |
 |---|---|
-| **Quantified Value** | Credit card is by far the most popular payment method across all states (> 65%). Boleto is a solid runner-up (> 13%). RR (Roraima) has the highest boleto proportion (32%) but represents only **0.05% of all orders** |
+| **Quantified Value** | Credit card is by far the most popular payment method across all states (**> 65%**). Boleto is a solid runner-up (**> 13%**). RR (Roraima) has the highest boleto share (**32%**) but represents only **0.05%** of all orders |
 | **Business Metric** | Payment type share by customer state |
-| Credit card is the dominant payment method across almost every state. RR stands out with boleto as its top method and zero debit-card or voucher usage — but with so few orders, this is a curiosity, not a trend. |
+
+Credit card is the dominant payment method across almost every state. RR stands out with boleto as its top method and zero debit-card or voucher usage — but with so few orders, this is a curiosity, not a trend.
 
 ### 🏪 Sellers
 
-#### Insight 5: More Volume, More "Needs Improvement" — But Fewer "Bad" Reviews
-**So what?** Scale seems to trade perfection for consistency — worth investigating *why* before drawing conclusions.
+#### Insight 6: More Volume, More "Needs Improvement" — But Fewer "Bad" Reviews
+In plain terms: the more orders a seller handles, the more "just okay" reviews they collect — but far fewer truly bad ones. More volume brings more average experiences, not more terrible ones, and that's worth understanding before deciding whether — or how — to fix it.
 
 | | |
 |---|---|
-| **Quantified Value** | [add: % needs-improvement and % bad reviews by volume tier] |
+| **Quantified Value** | "Needs Improvement" share rises with volume (23% → 38%), while "Bad" share falls (13% → 1%) |
 | **Business Metric** | Seller Volume × Review Score quadrant (High/Medium/Low volume × Excellent/Needs Improvement/Bad) |
-| **The Story** | As sellers handle more orders, the share of merely "needs improvement" reviews rises — but, surprisingly, the share of outright "bad" reviews falls. **Open question: why?** (See Caveats.) |
 
-#### Insight 6: Half the Seller Base Is a Growth Opportunity Waiting to Happen
-**So what?** "Cooling Off" sellers are the fastest path to more Leaders; "Recovering/Underperforming" sellers are the biggest lever for overall platform revenue.
+As sellers handle more orders, the share of merely "needs improvement" reviews rises — but, surprisingly, the share of outright "bad" reviews falls. **Open question: why?** (See Caveats.)
+
+<details>
+<summary>Full breakdown by volume tier (click to expand)</summary>
+
+| Volume Tier | Needs Improvement | Bad |
+|---|---|---|
+| Low Volume | 23% | 13% |
+| Medium Volume | 35% | 1.4% |
+| High Volume | 38% | 1% |
+
+</details>
+
+#### Insight 7: Half the Seller Base Is a Growth Opportunity Waiting to Happen
+"Cooling Off" sellers are the fastest path to more Leaders; "Recovering" and "Underperforming" sellers are the biggest lever for overall platform revenue.
 
 | | |
 |---|---|
 | **Quantified Value** | Cooling Off sellers are **2x** as numerous as Leaders (with slightly higher avg sales); Recovering + Underperforming make up **~50%** of sellers with **60%+ lower** average sales |
 | **Business Metric** | Seller Performance tiers — Avg Sales (AS) by tier (Growth Leader, Cooling Off, Recovering, Underperforming) |
-| **The Story** | Leader sellers give the platform a solid revenue base. Cooling Off sellers already perform nearly as well and are numerous — a natural pipeline into the Leader tier. Recovering and Underperforming sellers make up half the base by count but contribute far less revenue each — the single biggest opportunity to lift overall platform sales. |
+
+Leader sellers give the platform a solid revenue base. Cooling Off sellers already perform nearly as well and are numerous — a natural pipeline into the Leader tier. Recovering and Underperforming sellers make up half the base by count but contribute far less revenue each — the single biggest opportunity to lift overall platform sales.
+
+<details>
+<summary>How seller tiers are defined (click to expand)</summary>
+
+Every seller is scored on two simple questions: is their average sale size above or below their own lifetime average, and is their sales trend this month better or worse than last month?
+
+| Lifetime avg. sales | Month-over-month trend | Tier |
+|---|---|---|
+| Above average | Improving | **Growth Leader** |
+| Above average | Flat or declining | **Cooling Off** |
+| Below average | Improving | **Recovering** |
+| Below average | Flat or declining | **Underperforming** |
+| Not enough order history | — | Insufficient Data |
+
+</details>
 
 ### 👥 Customers
 
-#### Insight 7: The Customer Base Is Skewed Toward Risk
-**So what?** Retention — not just acquisition — needs to be the priority, because most of the "next tier" of customers are disengaged, not loyal.
+#### Insight 8: The Customer Base Is Skewed Toward Risk
+Retention — not just acquisition — needs to be the priority, because most of the "next tier" of customers are disengaged, not loyal.
 
 | | |
 |---|---|
-| **Quantified Value** | [add: % of customers in each RFM segment] |
+| **Quantified Value** | New Customers: 31%, Cannot Lose Them: 18%, Lost: 16%, At Risk: 15%, Low Value/Promising: 8%, Champions: 1.9%, Loyal: 1.2% (rounded) |
 | **Business Metric** | RFM Segmentation (Recency, Frequency, Monetary) |
-| **The Story** | New customers form the largest group — but the next three largest are **Cannot Lose Them**, **Lost**, and **At Risk**, not repeat loyal buyers. The base is fragile, and losing these segments would hurt more than the new-customer pipeline can offset. |
+
+New customers form the largest group — but the next three largest are **Cannot Lose Them**, **Lost**, and **At Risk**, not repeat loyal buyers. The base is fragile, and losing these segments would hurt more than the new-customer pipeline can offset.
 
 <details>
 <summary>RFM segment reference (click to expand)</summary>
@@ -185,23 +219,25 @@ The RR pattern is interesting but too small to act on — flagging it for visibi
 
 ### 🌎 Revenue & Geography
 
-#### Insight 8: Cross-State Sales Are the Real Revenue Engine
-**So what?** Olist's core value proposition is connecting customers with sellers *outside* their home state — logistics for this needs to stay a strength, not a weakness.
+#### Insight 9: Cross-State Sales Are the Real Revenue Engine
+Olist's core value proposition is connecting customers with sellers *outside* their home state — logistics for this needs to stay a strength, not a weakness.
 
 | | |
 |---|---|
 | **Quantified Value** | **70%** of total revenue comes from cross-state orders |
 | **Business Metric** | Revenue split — cross-state vs. in-state (customer state vs. seller state) |
-| **The Story** | Most purchases aren't local — customers are routinely buying from sellers in a different state, making cross-state logistics a core (not peripheral) part of the business model. |
+
+Most purchases aren't local — customers are routinely buying from sellers in a different state, making cross-state logistics a core (not peripheral) part of the business model.
 
 #### Insight 10: The Highest-Value Order Profile Is Very Specific
-**So what?** This is a small but extremely valuable customer profile worth understanding and replicating — not a coincidence.
+This is a small but extremely valuable customer profile worth understanding and replicating — not a coincidence.
 
 | | |
 |---|---|
-| **Quantified Value** | [add: % of total net revenue this profile represents] |
+| **Quantified Value** | This profile represents **12%** of Total Net Revenue |
 | **Business Metric** | Total Net Revenue by delivery-speed × cross-state × customer segment × installment count |
-| **The Story** | The single biggest source of net revenue is orders that arrive **6+ days early**, ship **cross-state**, are placed by **Cannot Lose Them** customers, and are paid in **7+ installments** — a specific, high-value combination worth targeting directly. |
+
+The single biggest source of net revenue is orders that arrive **6+ days early**, ship **cross-state**, are placed by **Cannot Lose Them** customers, and are paid in **7+ installments** — a specific, high-value combination worth targeting directly.
 
 ---
 
@@ -226,21 +262,15 @@ The RR pattern is interesting but too small to act on — flagging it for visibi
 - Align inventory and seller-capacity planning with the two known seasonal growth windows (**May–Jul**, **Nov–Jan**) *(→ Insight 2)*.
 - Treat the RR/boleto pattern as a monitoring note, not an action item, until order volume there grows *(→ Insight 4)*.
 
-[add: any additional recommendations specific to your presentation audience]
-
 ---
 
 ## 6. Caveats & Assumptions
 
-- **Dataset scope:** Olist's data reflects the Brazilian marketplace only, over [add date range]; findings may not generalize to other markets, countries, or time periods.
-- **Currency:** All monetary figures are in Brazilian Real (BRL) unless stated otherwise. [add: note any conversions applied, if none, remove this line]
+- **Dataset scope:** Olist's data reflects the Brazilian marketplace only, over Sep 2016 – Sep 2018; findings may not generalize to other markets, countries, or time periods.
+- **Currency:** All monetary figures are in Brazilian Real (BRL) unless stated otherwise.
 - **Small-sample caveat:** The RR/boleto finding (Insight 4) is based on just **0.05% of all orders** — interesting, but not statistically robust enough to act on.
-- **Freight-to-price threshold:** The `> 0.18` cutoff used to flag "high" freight ratio orders was chosen [add: rationale — e.g. top quartile of the distribution / a round business threshold]; it's a judgment call, not an industry standard.
+- **Freight-to-price threshold:** The `> 0.18` cutoff used to flag "high" freight ratio orders is a judgment call, not an industry standard.
 - **RFM scoring:** Recency and Monetary scores are quintile-based (1–5), calculated **relative to this dataset's own population** — they are not universal benchmarks and would shift if applied to a different customer base or time window.
-- **Seller tier thresholds:** Volume tiers (High/Medium/Low) and rating tiers (Excellent/Needs Improvement/Bad) use fixed cutoffs: [add: restate or confirm the exact thresholds, e.g. High Volume >200 orders, Excellent ≥4.0, etc.]
+- **Seller tier thresholds:** Sellers are grouped by order volume — **High Volume**: more than 200 orders, **Medium Volume**: 51–200 orders, **Low Volume**: 50 or fewer orders — and separately by average review score — **Excellent**: 4.0 or higher, **Needs Improvement**: 3.0–3.99, **Bad**: below 3.0.
 - **Open question:** Why high-volume sellers see more "needs improvement" but fewer "bad" reviews (Insight 5) is unresolved in this analysis — it would benefit from qualitative follow-up, e.g. review-text sentiment analysis.
-- **Delivery delay definition:** "Delayed" is calculated as [add: actual delivery date vs. estimated delivery date — confirm exact field logic used].
-- **Grain of `fact_sales`:** Order ID + item — meaning multi-item orders contribute multiple rows, which affects any "per order" counts unless explicitly deduplicated.
-- **Project purpose:** This is a portfolio/learning project. Insights are demonstrative of analytics capability and are not verified, board-level business decisions.
-
-
+- **Delivery delay definition:** "Delayed" is calculated as actual delivery date minus estimated delivery date.
