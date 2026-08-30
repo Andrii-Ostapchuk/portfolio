@@ -99,6 +99,7 @@ The business has a stable foundation to scale marketing and retention on — gro
 Across the full dataset period, new customer sign-ups climbed consistently without dramatic spikes or crashes — a sign of organic, sustainable growth rather than short-lived marketing bursts.
 
 ![Customer Acquisition Over Time](../../assets/photos/insight_1.png)
+Graph 1: *Customer Acquisition Over Time*
 
 <div style="margin-bottom: 50px;"></div>
 
@@ -108,6 +109,9 @@ These windows are the best times to plan inventory, seller capacity, and marketi
 * **Business Metric:** Month-over-Month revenue growth, top 5 historical categories
 
 Twice a year, revenue growth for the leading categories accelerates: once mid-year (**May–Jul**) and once around the holidays (**Nov–Jan**) — a repeatable seasonal pattern worth building the calendar around.
+
+![Top Categories MoM Revenue Growth](../../assets/photos/insight_2.png)
+Graph 2: *Top Categories MoM Revenue Growth*
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
@@ -120,6 +124,9 @@ A handful of bulky/heavy categories are scoring higher freight-to-price ratios e
 
 Every summer, shipping costs climb relative to item price, and it's disproportionately driven by `bed_bath_table`, `health_beauty`, and `furniture_decor` — categories that are either heavy, bulky, or both.
 
+![Freight to Price Ratio Trend](../../assets/photos/insight_3.png)
+Graph 3: *Freight to Price Ratio Trend*
+
 <div style="margin-bottom: 50px;"></div>
 
 #### <a id="insight-4"></a>Insight 4: Delivery Delays Are the Biggest Threat to Satisfaction
@@ -128,6 +135,9 @@ On-time delivery is likely the single highest-leverage fix for review scores —
 * **Business Metric:** Review score vs. delivery delay (actual vs. estimated delivery date)
 
 When an order arrives later than promised, satisfaction doesn't just dip — it drops sharply. Delivery reliability outweighs almost every other factor tested against review scores.
+
+![Review Score vs Delivery Delay](../../assets/photos/insight_4.png)
+Graph 4: *Review Score vs Delivery Delay*
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
@@ -140,6 +150,9 @@ The RR pattern is interesting but too small to act on — flagging it for visibi
 
 Credit card is the dominant payment method across almost every state. RR stands out with boleto as its top method and zero debit-card or voucher usage — but with so few orders, this is a curiosity, not a trend.
 
+![Payment Type Distribution by State](../../assets/photos/insight_5.png)
+Graph 5: *Payment Type Distribution by State*
+
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
 ### 🏪 Sellers
@@ -151,6 +164,9 @@ In plain terms: the more orders a seller handles, the more "just okay" reviews t
 
 As sellers handle more orders, the share of merely "needs improvement" reviews rises — but, surprisingly, the share of outright "bad" reviews falls. **Open question: why?** (See Caveats.)
 
+![Seller Volume vs Review Score Matrix](../../assets/photos/insight_6.png)
+Graph 6: *Seller Volume vs Review Score Matrix*
+
 <div style="margin-bottom: 50px;"></div>
 
 #### <a id="insight-7"></a>Insight 7: Half the Seller Base Is a Growth Opportunity Waiting to Happen
@@ -159,6 +175,9 @@ As sellers handle more orders, the share of merely "needs improvement" reviews r
 * **Business Metric:** Seller Performance tiers — Avg Sales (AS) by tier (Growth Leader, Cooling Off, Recovering, Underperforming)
 
 Leader sellers give the platform a solid revenue base. Cooling Off sellers already perform nearly as well and are numerous — a natural pipeline into the Leader tier. Recovering and Underperforming sellers make up half the base by count but contribute far less revenue each — the single biggest opportunity to lift overall platform sales.
+
+![Seller Performance Health Tiers](../../assets/photos/insight_7.png)
+Graph 7: *Seller Performance Health Tiers*
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
@@ -171,6 +190,8 @@ Retention — not just acquisition — needs to be the priority, because most of
 
 New customers form the largest group — but the next three largest are **Cannot Lose Them**, **Lost**, and **At Risk**, not repeat loyal buyers. The base is fragile, and losing these segments would hurt more than the new-customer pipeline can offset.
 
+![Customer RFM Cohort Segmentation](../../assets/photos/insight_8.png)
+Graph 8: *Customer RFM Cohort Segmentation*
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
@@ -183,6 +204,9 @@ Olist's core value proposition is connecting customers with sellers *outside* th
 
 Most purchases aren't local — customers are routinely buying from sellers in a different state, making cross-state logistics a core (not peripheral) part of the business model.
 
+![Cross-State vs In-State Revenue Share](../../assets/photos/insight_9.png)
+Graph 9: *Cross-State vs In-State Revenue Share*
+
 <div style="margin-bottom: 50px;"></div>
 
 #### <a id="insight-10"></a>Insight 10: The Highest-Value Order Profile Is Very Specific
@@ -191,6 +215,9 @@ This is a small but extremely valuable customer profile worth understanding and 
 * **Business Metric:** Total Net Revenue by delivery-speed × cross-state × customer segment × installment count
 
 The single biggest source of net revenue is orders that arrive **6+ days early**, ship **cross-state**, are placed by **Cannot Lose Them** customers, and are paid in **7+ installments** — a specific, high-value combination worth targeting directly.
+
+![High-Value Order Profile Analysis](../../assets/photos/insight_10.png)
+Graph 10: *High-Value Order Profile Analysis*
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
