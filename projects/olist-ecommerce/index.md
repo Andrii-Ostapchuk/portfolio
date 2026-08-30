@@ -15,10 +15,8 @@ An end-to-end analytics engineering project turning raw marketplace data into ex
 
 This project offers a real analytics engineering engagement: taking a messy, multi-table e-commerce dataset and turning it into a governed, business-ready reporting layer.
 
-**Dataset:** [Olist Brazilian E-Commerce public dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-
-**Time period covered:** Sep 2016 – Sep 2018
-
+**Dataset:** [Olist Brazilian E-Commerce public dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)<br>
+**Time period covered:** Sep 2016 – Sep 2018<br>
 **Tools used:** PostgreSQL (data warehouse), Power BI (semantic model & dashboards)
 
 **Business goals this project set out to answer:**
@@ -80,11 +78,11 @@ The warehouse follows a **Medallion Architecture** — four schemas, each with a
 | Customer growth | Steady, organic — **94.74K** total customers acquired, averaging **9.87%** MoM growth |
 | Seasonal peaks | Category revenue accelerates **May–Jul** and **Nov–Jan** |
 | Logistics cost | Freight-to-price ratio rises every **summer**, driven by bulky categories |
+| Satisfaction driver | Delivery delays hurt review scores **very strongly** — the #1 lever |
 | Payment mix | **Credit card** dominates nationally; Boleto is runner-up |
 | Seller health | Half of all sellers sit in lower-performing tiers — the biggest growth lever |
 | Customer health | New customers are the largest group, but **At Risk / Lost / Cannot-Lose-Them** together outnumber loyal repeat buyers |
 | Revenue geography | **70%** of revenue comes from cross-state sales |
-| Satisfaction driver | Delivery delays hurt review scores **very strongly** — the #1 lever |
 | Top revenue profile | Early-delivered, cross-state orders from **Cannot Lose Them** customers paying in 7+ installments |
 
 ---
@@ -122,7 +120,7 @@ Every summer, shipping costs climb relative to item price, and it's disproportio
 
 <div style="margin-bottom: 50px;"></div>
 
-#### <a id="insight-9"></a>Insight 9: Delivery Delays Are the Biggest Threat to Satisfaction
+#### <a id="insight-4"></a>Insight 4: Delivery Delays Are the Biggest Threat to Satisfaction
 On-time delivery is likely the single highest-leverage fix for review scores — bigger than product or price.
 * **Quantified Value:** Average review score, on-time: **4.0**; delayed: **2.5**
 * **Business Metric:** Review score vs. delivery delay (actual vs. estimated delivery date)
@@ -133,7 +131,7 @@ When an order arrives later than promised, satisfaction doesn't just dip — it 
 
 ### 💳 Payments
 
-#### <a id="insight-4"></a>Insight 4: Credit Card Wins Nationally — With One Curious Regional Exception
+#### <a id="insight-5"></a>Insight 5: Credit Card Wins Nationally — With One Curious Regional Exception
 The RR pattern is interesting but too small to act on — flagging it for visibility, not for a business decision.
 * **Quantified Value:** Credit card is by far the most popular payment method across all states (**> 65%**). Boleto is a solid runner-up (**> 13%**). RR (Roraima) has the highest boleto share (**32%**) but represents only **0.05%** of all orders
 * **Business Metric:** Payment type share by customer state
@@ -144,7 +142,7 @@ Credit card is the dominant payment method across almost every state. RR stands 
 
 ### 🏪 Sellers
 
-#### <a id="insight-5"></a>Insight 5: More Volume, More "Needs Improvement" — But Fewer "Bad" Reviews
+#### <a id="insight-6"></a>Insight 6: More Volume, More "Needs Improvement" — But Fewer "Bad" Reviews
 In plain terms: the more orders a seller handles, the more "just okay" reviews they collect — but far fewer truly bad ones. More volume brings more average experiences, not more terrible ones, and that's worth understanding before deciding whether — or how — to fix it.
 * **Quantified Value:** "Needs Improvement" share rises with volume (23% → 38%), while "Bad" share falls (13% → 1%)
 * **Business Metric:** Seller Volume × Review Score quadrant (High/Medium/Low volume × Excellent/Needs Improvement/Bad)
@@ -153,18 +151,17 @@ As sellers handle more orders, the share of merely "needs improvement" reviews r
 
 <details>
 <summary><strong>Full breakdown by volume tier (click to expand)</strong></summary>
-
-| Volume Tier | Needs Improvement | Bad |
-|---|---|---|
-| Low Volume | 23% | 13% |
-| Medium Volume | 35% | 1.4% |
-| High Volume | 38% | 1% |
-
+<br>
+<ul>
+<li><strong>Low Volume:</strong> 23% Needs Improvement, 13% Bad</li>
+<li><strong>Medium Volume:</strong> 35% Needs Improvement, 1.4% Bad</li>
+<li><strong>High Volume:</strong> 38% Needs Improvement, 1% Bad</li>
+</ul>
 </details>
 
 <div style="margin-bottom: 50px;"></div>
 
-#### <a id="insight-6"></a>Insight 6: Half the Seller Base Is a Growth Opportunity Waiting to Happen
+#### <a id="insight-7"></a>Insight 7: Half the Seller Base Is a Growth Opportunity Waiting to Happen
 "Cooling Off" sellers are the fastest path to more Leaders; "Recovering" and "Underperforming" sellers are the biggest lever for overall platform revenue.
 * **Quantified Value:** Cooling Off sellers are **2x** as numerous as Leaders (with slightly higher avg sales); Recovering + Underperforming make up **~50%** of sellers with **60%+ lower** average sales
 * **Business Metric:** Seller Performance tiers — Avg Sales (AS) by tier (Growth Leader, Cooling Off, Recovering, Underperforming)
@@ -173,24 +170,21 @@ Leader sellers give the platform a solid revenue base. Cooling Off sellers alrea
 
 <details>
 <summary><strong>How seller tiers are defined (click to expand)</strong></summary>
-
-Every seller is scored on two simple questions: is their average sale size above or below their own lifetime average, and is their sales trend this month better or worse than last month?
-
-| Lifetime avg. sales | Month-over-month trend | Tier |
-|---|---|---|
-| Above average | Improving | **Growth Leader** |
-| Above average | Flat or declining | **Cooling Off** |
-| Below average | Improving | **Recovering** |
-| Below average | Flat or declining | **Underperforming** |
-| Not enough order history | — | Insufficient Data |
-
+<br>
+<p>Every seller is scored on two simple questions: is their average sale size above or below their own lifetime average, and is their sales trend this month better or worse than last month?</p>
+<ul>
+<li><strong>Growth Leader:</strong> Above average sales, improving month-over-month.</li>
+<li><strong>Cooling Off:</strong> Above average sales, flat or declining month-over-month.</li>
+<li><strong>Recovering:</strong> Below average sales, improving month-over-month.</li>
+<li><strong>Underperforming:</strong> Below average sales, flat or declining month-over-month.</li>
+</ul>
 </details>
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
 ### 👥 Customers
 
-#### <a id="insight-7"></a>Insight 7: The Customer Base Is Skewed Toward Risk
+#### <a id="insight-8"></a>Insight 8: The Customer Base Is Skewed Toward Risk
 Retention — not just acquisition — needs to be the priority, because most of the "next tier" of customers are disengaged, not loyal.
 * **Quantified Value:** New Customers: 31%, Cannot Lose Them: 18%, Lost: 16%, At Risk: 15%, Low Value/Promising: 8%, Champions: 1.9%, Loyal: 1.2% (rounded)
 * **Business Metric:** RFM Segmentation (Recency, Frequency, Monetary)
@@ -199,21 +193,20 @@ New customers form the largest group — but the next three largest are **Cannot
 
 <details>
 <summary><strong>RFM segment reference (click to expand)</strong></summary>
-
-| Segment | Criteria | Profile | Recommended Action |
-|---|---|---|---|
-| Recent / New | r_score ≥ 4 | Freshly acquired, high repeat-purchase potential | Onboarding emails, second-purchase coupons, recommendations |
-| Cannot Lose Them | m_score = 5 (dormant) | High-value "whale" accounts gone quiet | Aggressive reactivation, premium win-back offers, direct outreach |
-| Lost / Hibernating | r_score ≤ 2, m_score ≤ 2 | Churned, low-spend, long ago | Exclude from expensive channels; low-cost quarterly re-engagement only |
-| At Risk | r_score ≤ 2, m_score ≥ 3 | Previously solid spenders, now disengaged | Personalized win-back surveys, targeted bundles, feedback requests |
-
+<br>
+<ul>
+<li><strong>Recent / New (r_score ≥ 4):</strong> Freshly acquired buyers. Action: Onboarding and second-purchase coupons.</li>
+<li><strong>Cannot Lose Them (m_score = 5):</strong> Dormant high-value accounts. Action: Aggressive reactivation and direct outreach.</li>
+<li><strong>Lost / Hibernating (r_score ≤ 2, m_score ≤ 2):</strong> Churned, low-spend accounts. Action: Low-cost automated re-engagement only.</li>
+<li><strong>At Risk (r_score ≤ 2, m_score ≥ 3):</strong> Previously solid spenders, now disengaged. Action: Personalized win-back surveys and targeted bundles.</li>
+</ul>
 </details>
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
 ### 🌎 Revenue & Geography
 
-#### <a id="insight-8"></a>Insight 8: Cross-State Sales Are the Real Revenue Engine
+#### <a id="insight-9"></a>Insight 9: Cross-State Sales Are the Real Revenue Engine
 Olist's core value proposition is connecting customers with sellers *outside* their home state — logistics for this needs to stay a strength, not a weakness.
 * **Quantified Value:** **70%** of total revenue comes from cross-state orders
 * **Business Metric:** Revenue split — cross-state vs. in-state (customer state vs. seller state)
@@ -234,23 +227,23 @@ The single biggest source of net revenue is orders that arrive **6+ days early**
 ## 5. Recommendations
 
 **Sellers**
-- Build a "graduation" program to help **Cooling Off** sellers cross into the **Leader** tier — they're already close on average sales [*(→ Insight 6)*](#insight-6).
-- Prioritize support (training, promotion tools, logistics help) for **Recovering** and **Underperforming** sellers, since they represent half the seller base but a fraction of the revenue [*(→ Insight 6)*](#insight-6).
-- Investigate *why* high-volume sellers get more "needs improvement" but fewer "bad" reviews — e.g. via review-text analysis — before designing a fix [*(→ Insight 5)*](#insight-5).
+- Build a "graduation" program to help **Cooling Off** sellers cross into the **Leader** tier — they're already close on average sales [*(→ Insight 7)*](#insight-7).
+- Prioritize support (training, promotion tools, logistics help) for **Recovering** and **Underperforming** sellers, since they represent half the seller base but a fraction of the revenue [*(→ Insight 7)*](#insight-7).
+- Investigate *why* high-volume sellers get more "needs improvement" but fewer "bad" reviews — e.g. via review-text analysis — before designing a fix [*(→ Insight 6)*](#insight-6).
 
 **Customers**
-- Launch reactivation campaigns targeted specifically at **Cannot Lose Them** and **At Risk** segments — they represent disproportionate historical value at real risk of full churn [*(→ Insight 7)*](#insight-7).
+- Launch reactivation campaigns targeted specifically at **Cannot Lose Them** and **At Risk** segments — they represent disproportionate historical value at real risk of full churn [*(→ Insight 8)*](#insight-8).
 - Study and replicate the **Cannot Lose Them + cross-state + early delivery + 7+ installments** profile in marketing and offer design, since it's the single highest-revenue combination found [*(→ Insight 10)*](#insight-10).
-- Keep new-customer onboarding strong, but treat it as only half the retention story [*(→ Insight 7)*](#insight-7).
+- Keep new-customer onboarding strong, but treat it as only half the retention story [*(→ Insight 8)*](#insight-8).
 
 **Logistics**
-- Treat on-time delivery as the top lever for customer satisfaction — prioritize it above other satisfaction initiatives [*(→ Insight 9)*](#insight-9).
+- Treat on-time delivery as the top lever for customer satisfaction — prioritize it above other satisfaction initiatives [*(→ Insight 4)*](#insight-4).
 - Review packaging/shipping logistics specifically for `bed_bath_table`, `health_beauty`, and `furniture_decor` ahead of summer, when freight ratios spike [*(→ Insight 3)*](#insight-3).
-- Protect and invest in cross-state fulfillment reliability, given it drives 70% of revenue [*(→ Insight 8)*](#insight-8).
+- Protect and invest in cross-state fulfillment reliability, given it drives 70% of revenue [*(→ Insight 9)*](#insight-9).
 
 **Planning & Operations**
 - Align inventory and seller-capacity planning with the two known seasonal growth windows (**May–Jul**, **Nov–Jan**) [*(→ Insight 2)*](#insight-2).
-- Treat the RR/boleto pattern as a monitoring note, not an action item, until order volume there grows [*(→ Insight 4)*](#insight-4).
+- Treat the RR/boleto pattern as a monitoring note, not an action item, until order volume there grows [*(→ Insight 5)*](#insight-5).
 
 ---
 
@@ -258,9 +251,9 @@ The single biggest source of net revenue is orders that arrive **6+ days early**
 
 - **Dataset scope:** Olist's data reflects the Brazilian marketplace only, over Sep 2016 – Sep 2018; findings may not generalize to other markets, countries, or time periods.
 - **Currency:** All monetary figures are in Brazilian Real (BRL) unless stated otherwise.
-- **Small-sample caveat:** The RR/boleto finding ([*Insight 4*](#insight-4)) is based on just **0.05% of all orders** — interesting, but not statistically robust enough to act on.
+- **Small-sample caveat:** The RR/boleto finding ([*Insight 5*](#insight-5)) is based on just **0.05% of all orders** — interesting, but not statistically robust enough to act on.
 - **Freight-to-price threshold:** The `> 0.18` cutoff used to flag "high" freight ratio orders is a judgment call, not an industry standard.
 - **RFM scoring:** Recency and Monetary scores are quintile-based (1–5), calculated **relative to this dataset's own population** — they are not universal benchmarks and would shift if applied to a different customer base or time window.
 - **Seller tier thresholds:** Sellers are grouped by order volume — **High Volume**: more than 200 orders, **Medium Volume**: 51–200 orders, **Low Volume**: 50 or fewer orders — and separately by average review score — **Excellent**: 4.0 or higher, **Needs Improvement**: 3.0–3.99, **Bad**: below 3.0.
-- **Open question:** Why high-volume sellers see more "needs improvement" but fewer "bad" reviews ([*Insight 5*](#insight-5)) is unresolved in this analysis — it would benefit from qualitative follow-up, e.g. review-text sentiment analysis.
+- **Open question:** Why high-volume sellers see more "needs improvement" but fewer "bad" reviews ([*Insight 6*](#insight-6)) is unresolved in this analysis — it would benefit from qualitative follow-up, e.g. review-text sentiment analysis.
 - **Delivery delay definition:** "Delayed" is calculated as actual delivery date minus estimated delivery date.
