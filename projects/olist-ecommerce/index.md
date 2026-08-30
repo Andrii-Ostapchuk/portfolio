@@ -149,16 +149,6 @@ In plain terms: the more orders a seller handles, the more "just okay" reviews t
 
 As sellers handle more orders, the share of merely "needs improvement" reviews rises — but, surprisingly, the share of outright "bad" reviews falls. **Open question: why?** (See Caveats.)
 
-<details>
-<summary><strong>Full breakdown by volume tier (click to expand)</strong></summary>
-<br>
-<ul>
-<li><strong>Low Volume:</strong> 23% Needs Improvement, 13% Bad</li>
-<li><strong>Medium Volume:</strong> 35% Needs Improvement, 1.4% Bad</li>
-<li><strong>High Volume:</strong> 38% Needs Improvement, 1% Bad</li>
-</ul>
-</details>
-
 <div style="margin-bottom: 50px;"></div>
 
 #### <a id="insight-7"></a>Insight 7: Half the Seller Base Is a Growth Opportunity Waiting to Happen
@@ -167,18 +157,6 @@ As sellers handle more orders, the share of merely "needs improvement" reviews r
 * **Business Metric:** Seller Performance tiers — Avg Sales (AS) by tier (Growth Leader, Cooling Off, Recovering, Underperforming)
 
 Leader sellers give the platform a solid revenue base. Cooling Off sellers already perform nearly as well and are numerous — a natural pipeline into the Leader tier. Recovering and Underperforming sellers make up half the base by count but contribute far less revenue each — the single biggest opportunity to lift overall platform sales.
-
-<details>
-<summary><strong>How seller tiers are defined (click to expand)</strong></summary>
-<br>
-<p>Every seller is scored on two simple questions: is their average sale size above or below their own lifetime average, and is their sales trend this month better or worse than last month?</p>
-<ul>
-<li><strong>Growth Leader:</strong> Above average sales, improving month-over-month.</li>
-<li><strong>Cooling Off:</strong> Above average sales, flat or declining month-over-month.</li>
-<li><strong>Recovering:</strong> Below average sales, improving month-over-month.</li>
-<li><strong>Underperforming:</strong> Below average sales, flat or declining month-over-month.</li>
-</ul>
-</details>
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
@@ -191,16 +169,6 @@ Retention — not just acquisition — needs to be the priority, because most of
 
 New customers form the largest group — but the next three largest are **Cannot Lose Them**, **Lost**, and **At Risk**, not repeat loyal buyers. The base is fragile, and losing these segments would hurt more than the new-customer pipeline can offset.
 
-<details>
-<summary><strong>RFM segment reference (click to expand)</strong></summary>
-<br>
-<ul>
-<li><strong>Recent / New (r_score ≥ 4):</strong> Freshly acquired buyers. Action: Onboarding and second-purchase coupons.</li>
-<li><strong>Cannot Lose Them (m_score = 5):</strong> Dormant high-value accounts. Action: Aggressive reactivation and direct outreach.</li>
-<li><strong>Lost / Hibernating (r_score ≤ 2, m_score ≤ 2):</strong> Churned, low-spend accounts. Action: Low-cost automated re-engagement only.</li>
-<li><strong>At Risk (r_score ≤ 2, m_score ≥ 3):</strong> Previously solid spenders, now disengaged. Action: Personalized win-back surveys and targeted bundles.</li>
-</ul>
-</details>
 
 <hr style="border: none; height: 2px; background-color: #d0d7de; margin: 70px 0;">
 
