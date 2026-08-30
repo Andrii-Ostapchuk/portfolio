@@ -7,16 +7,16 @@ title: Olist Data Warehouse
 
 # 📦 Olist E-Commerce Data Warehouse & Power BI Pipeline
 
-[add: one-sentence tagline, e.g. "An end-to-end analytics engineering project turning raw marketplace data into executive-ready insights."]
+An end-to-end analytics engineering project turning raw marketplace data into executive-ready insights.
 
 ---
 
 ## 1. Background & Overview
 
-[add: 2–3 sentences on why you chose this dataset/project — e.g. "This project simulates a real analytics engineering engagement: taking a messy, multi-table e-commerce dataset and turning it into a governed, business-ready reporting layer."]
+This project offers a real analytics engineering engagement: taking a messy, multi-table e-commerce dataset and turning it into a governed, business-ready reporting layer.
 
-**Dataset:** Olist Brazilian E-Commerce public dataset — [add link to source, e.g. Kaggle]
-**Time period covered:** [add date range, e.g. Sep 2016 – Oct 2018]
+**Dataset:** [Olist Brazilian E-Commerce public dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+**Time period covered:** Sep 2016 – Sep 2018
 **Tools used:** PostgreSQL (data warehouse), Power BI (semantic model & dashboards)
 
 **Business goals this project set out to answer:**
@@ -25,7 +25,7 @@ title: Olist Data Warehouse
 - Where is the business losing money or satisfaction to logistics?
 - Which customer segments and revenue patterns matter most?
 
-[add: link to live Power BI dashboard / screenshots, if available]
+You can download the complete **Power BI dashboards** here: [Power BI reporting](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/documents/Power%20BI%20reporting)
 
 ---
 
@@ -35,7 +35,7 @@ The warehouse follows a **Medallion Architecture** — four schemas, each with a
 
 | Layer | Schema | Purpose |
 |---|---|---|
-| Raw | `bronze` | Ingests raw, untransformed source data (CSV/API) |
+| Raw | `bronze` | Ingests raw, untransformed source data (CSV) |
 | Cleansed | `silver` | Conforms & validates: null handling, deduplication, chronological integrity checks |
 | Curated | `gold` | Business-ready **Star Schema** — dimensions, facts, resolved IDs, base metrics |
 | Presentation | `reporting` | Denormalized, pre-aggregated views built specifically for Power BI |
@@ -63,13 +63,13 @@ The warehouse follows a **Medallion Architecture** — four schemas, each with a
 | `top_categories_performance` | MoM revenue growth for the top 5 product categories |
 | `customer_acquisition_rate` | Daily new customers and cumulative growth |
 
-📄 *Full column-level definitions, DDL scripts, and the ER diagram live in [add link/path, e.g. `/docs` or a wiki page] — this README keeps the technical detail to a minimum on purpose.*
+📄 *Refer to [SQL scripts](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/scripts) to see the full defining scripts and to [ERD](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/documents/Table%20Relations) for data relations.*
 
 ---
 
 ## 3. Executive Summary
 
-> **The one-paragraph version:** [add: 2–3 sentences summarizing the overall state of the business in your own words — e.g. "Olist's marketplace is growing steadily, but revenue is concentrated in a specific customer/logistics profile, and both the customer base and the seller base show a 'long tail' of accounts at risk of disengaging."]
+>Olist's marketplace is growing steadily, but revenue is concentrated in a specific customer/logistics profile, and both the customer base and the seller base show a 'long tail' of accounts at risk of disengaging.
 
 **Headline numbers:**
 
@@ -92,53 +92,53 @@ The warehouse follows a **Medallion Architecture** — four schemas, each with a
 ### 📈 Growth & Seasonality
 
 #### Insight 1: Steady, Organic Customer Growth
-**So what?** The business has a stable foundation to scale marketing and retention on — growth isn't a fluke or a one-off spike.
+The business has a stable foundation to scale marketing and retention on — growth isn't a fluke or a one-off spike.
 
 | | |
 |---|---|
-| **Quantified Value** | [add: total new customers / avg daily or MoM growth %] |
+| **Quantified Value** | Total Customers: 94.74K | Average MoM Growth: 9.87% |
 | **Business Metric** | Customer Acquisition Rate (daily new customers + cumulative growth) |
-| **The Story** | Across the full dataset period, new customer sign-ups climbed consistently without dramatic spikes or crashes — a sign of organic, sustainable growth rather than short-lived marketing bursts. |
+| Across the full dataset period, new customer sign-ups climbed consistently without dramatic spikes or crashes — a sign of organic, sustainable growth rather than short-lived marketing bursts. |
 
 #### Insight 2: Two Seasonal Growth Windows
-**So what?** These windows are the best times to plan inventory, seller capacity, and marketing spend.
+These windows are the best times to plan inventory, seller capacity, and marketing spend.
 
 | | |
 |---|---|
-| **Quantified Value** | [add: MoM growth % in each window for the top 5 categories] |
+| **Quantified Value** | MoM growth from 35% to 120% in each window for the top 5 categories] |
 | **Business Metric** | Month-over-Month revenue growth, top 5 historical categories |
-| **The Story** | Twice a year, revenue growth for the leading categories accelerates: once mid-year (**May–Jul**) and once around the holidays (**Nov–Jan**) — a repeatable seasonal pattern worth building the calendar around. |
+| Twice a year, revenue growth for the leading categories accelerates: once mid-year (**May–Jul**) and once around the holidays (**Nov–Jan**) — a repeatable seasonal pattern worth building the calendar around. |
 
 ### 🚚 Logistics & Delivery
 
 #### Insight 3: Summer Shipping Costs Spike, and It's Category-Driven
-**So what?** A handful of bulky/heavy categories are quietly eating into margins every summer.
+A handful of bulky/heavy categories are scoring higher freight to price ratios every summer.
 
 | | |
 |---|---|
-| **Quantified Value** | Freight-to-price ratio **> 0.18** flagged as high; [add: % of orders/items above this threshold in summer vs. other seasons] |
+| **Quantified Value** | Freight-to-price ratio **> 0.18** during summer months. |
 | **Business Metric** | Freight-to-Price ratio, 30-day rolling average |
-| **The Story** | Every summer, shipping costs climb relative to item price, and it's disproportionately driven by `bed_bath_table`, `health_beauty`, and `furniture_decor` — categories that are either heavy, bulky, or both. |
+| Every summer, shipping costs climb relative to item price, and it's disproportionately driven by `bed_bath_table`, `health_beauty`, and `furniture_decor` — categories that are either heavy, bulky, or both. |
 
 #### Insight 9: Delivery Delays Are the Biggest Threat to Satisfaction
-**So what?** On-time delivery is likely the single highest-leverage fix for review scores — bigger than product or price.
+On-time delivery is likely the single highest-leverage fix for review scores — bigger than product or price.
 
 | | |
 |---|---|
-| **Quantified Value** | [add: avg review score for on-time vs. delayed orders, or correlation coefficient] |
+| **Quantified Value** | Average Review Score for on-time: 4.0; Average Review Score for delayed orders: 2.5 |
 | **Business Metric** | Review score vs. delivery delay (actual vs. estimated delivery date) |
-| **The Story** | When an order arrives later than promised, satisfaction doesn't just dip — it drops sharply. Delivery reliability outweighs almost every other factor tested against review scores. |
+| When an order arrives later than promised, satisfaction doesn't just dip — it drops sharply. Delivery reliability outweighs almost every other factor tested against review scores. |
 
 ### 💳 Payments
 
 #### Insight 4: Credit Card Wins Nationally — With One Curious Regional Exception
-**So what?** The RR pattern is interesting but too small to act on — flagging it for visibility, not for a business decision.
+The RR pattern is interesting but too small to act on — flagging it for visibility, not for a business decision.
 
 | | |
 |---|---|
-| **Quantified Value** | [add: national payment type % split]. RR (Roraima) is boleto-led but represents only **0.05% of all orders** |
+| **Quantified Value** | Credit card is by far the most popular payment method across all states (> 65%). Boleto is a solid runner-up (> 13%). RR (Roraima) has the highest boleto proportion (32%) but represents only **0.05% of all orders** |
 | **Business Metric** | Payment type share by customer state |
-| **The Story** | Credit card is the dominant payment method across almost every state. RR stands out with boleto as its top method and zero debit-card or voucher usage — but with so few orders, this is a curiosity, not a trend. |
+| Credit card is the dominant payment method across almost every state. RR stands out with boleto as its top method and zero debit-card or voucher usage — but with so few orders, this is a curiosity, not a trend. |
 
 ### 🏪 Sellers
 
