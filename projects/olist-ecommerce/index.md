@@ -98,7 +98,7 @@ The business has a stable foundation to scale marketing and retention on — gro
 
 Across the full dataset period, new customer sign-ups climbed consistently without dramatic spikes or crashes — a sign of organic, sustainable growth rather than short-lived marketing bursts.
 
-
+![Customer Acquisition Over Time](../../assets/photos/insight_1.png)
 
 <div style="margin-bottom: 50px;"></div>
 
