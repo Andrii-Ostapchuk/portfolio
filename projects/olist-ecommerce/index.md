@@ -13,8 +13,8 @@ In this project I built an end-to-end Medallion pipeline transforming messy, mul
 
 ## 1. Background & Overview
 
-**Dataset:** [Olist Brazilian E-Commerce public dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)<br>.
-**Time period covered:** Sep 2016 – Sep 2018<br>.
+**Dataset:** [Olist Brazilian E-Commerce public dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).<br>
+**Time period covered:** Sep 2016 – Sep 2018.<br>
 **Tools used:** PostgreSQL (data warehouse), Power BI (dashboards), DbVisualizer / Draw.io (entity–relationship models).
 
 **Business goals this project set out to answer:**
