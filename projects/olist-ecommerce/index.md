@@ -7,49 +7,47 @@ title: Olist Data Warehouse
 
 # 📦 Olist E-Commerce Data Warehouse & Power BI Pipeline
 
-An end-to-end analytics engineering project turning raw marketplace data into executive-ready insights.
+In this project I built an end-to-end Medallion pipeline transforming messy, multi-table e-commerce data into curated business objects and Power BI-ready reporting marts.
 
 ---
 
 ## 1. Background & Overview
 
-This project offers a real analytics engineering engagement: taking a messy, multi-table e-commerce dataset and turning it into a governed, business-ready reporting layer.
-
-**Dataset:** [Olist Brazilian E-Commerce public dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)<br>
-**Time period covered:** Sep 2016 – Sep 2018<br>
-**Tools used:** PostgreSQL (data warehouse), Power BI (semantic model & dashboards)
+**Dataset:** [Olist Brazilian E-Commerce public dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)<br>.
+**Time period covered:** Sep 2016 – Sep 2018<br>.
+**Tools used:** PostgreSQL (data warehouse), Power BI (dashboards), DbVisualizer / Draw.io (entity–relationship models).
 
 **Business goals this project set out to answer:**
 - How healthy is customer acquisition and retention?
 - Which sellers are driving growth, and which need support?
-- Where is the business losing money or satisfaction to logistics?
+- What are the strong patterns worth considering during decision making?
 - Which customer segments and revenue patterns matter most?
 
-You can download the complete **Power BI dashboards** here: [Power BI reporting](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/documents/Power%20BI%20reporting)
+📄 *You can download the complete **Power BI dashboards** here: [Power BI reporting](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/documents/Power%20BI%20reporting)*
 
 ---
 
 ## 2. Data Structure Overview
 
-The warehouse follows a **Medallion Architecture** — four schemas, each with a distinct job:
+The warehouse follows a **Medallion Architecture** — four schemas, each serving its purpose:
 
 | Layer | Schema | Purpose |
 |---|---|---|
-| Raw | `bronze` | Ingests raw, untransformed source data (CSV) |
-| Cleansed | `silver` | Conforms & validates: null handling, deduplication, chronological integrity checks |
-| Curated | `gold` | Business-ready **Star Schema** — dimensions, facts, resolved IDs, base metrics |
-| Presentation | `reporting` | Denormalized, pre-aggregated views built specifically for Power BI |
+| Raw | `bronze` | Ingests raw, untransformed source data (CSV). |
+| Cleansed | `silver` | Data cleansing; preserving the original table relationships. |
+| Curated | `gold` | **Star Schema** with dimension and fact tables, representing Business-Objects. |
+| Presentation | `reporting` | Analytical views built specifically for Power BI. |
 
 **Gold layer (Star Schema):**
 
 | Type | Table | Grain / Contents |
 |---|---|---|
-| Dimension | `dim_customers` | Unified customer records with latest known location |
-| Dimension | `dim_sellers` | Standardized seller profiles with geographic enrichment |
-| Dimension | `dim_products` | Product catalog, volumetric data, English category names |
-| Fact | `fact_sales` | **Order ID + item** — price, freight, delivery milestones |
-| Fact | `fact_payments` | Payment splits and installment metrics |
-| Fact | `fact_feedback` | Review scores and comments (chronologically validated) |
+| Dimension | `dim_customers` | Unified customer records with latest known location. |
+| Dimension | `dim_sellers` | Seller profiles with higher location precision. |
+| Dimension | `dim_products` | Product catalog, volume data, English category names. |
+| Fact | `fact_sales` | **Order ID + item** granularity. Price, freight, delivery milestones. |
+| Fact | `fact_payments` | **Order ID + payment sequential** granularity. Payment splits and installment metrics. |
+| Fact | `fact_feedback` | Review scores and comments (chronologically validated). |
 
 **Reporting layer (used directly by Power BI):**
 
@@ -63,7 +61,7 @@ The warehouse follows a **Medallion Architecture** — four schemas, each with a
 | `top_categories_performance` | MoM revenue growth for the top 5 product categories |
 | `customer_acquisition_rate` | Daily new customers and cumulative growth |
 
-📄 *Refer to [SQL scripts](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/scripts) to see the full defining scripts and to [ERD](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/documents/Table%20Relations) for data relations.*
+📄 *Refer to [SQL scripts](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/scripts) to see the full defining scripts and to [ERD](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/documents/Table%20Relations) for relationship models.*
 
 ---
 
