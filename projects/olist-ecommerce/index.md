@@ -20,7 +20,6 @@ In this project I built an end-to-end Medallion pipeline transforming messy, mul
 **Business goals this project set out to answer:**
 - How healthy is customer acquisition and retention?
 - Which sellers are driving growth, and which need support?
-- What are the strong patterns worth considering during decision making?
 - Which customer segments and revenue patterns matter most?
 
 📄 *You can download the complete **Power BI dashboards** here: [Power BI reporting](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project/tree/main/documents/Power%20BI%20reporting)*
