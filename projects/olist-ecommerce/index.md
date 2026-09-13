@@ -202,14 +202,14 @@ Retention - not just acquisition - needs to be the priority, because most of the
 
 See how Customer buckets were created:
 <details><summary>Customer classification</summary>
-Champion: `f_score ≥ 3, r_score ≥ 3, m_score ≥ 3` - Recent, frequent buyers with high lifetime spend; the most valuable cohort.<br><br>
-Loyal Customer: `f_score ≥ 3` - Repeat buyers with 2+ orders who show strong purchasing engagement.<br><br>
-Cannot Lose Them: `m_score = 5` - Top 20% lifetime spenders who have become dormant.<br><br>
-Recent / New Customer: `r_score ≥ 4` - Recently active buyers who have not yet reached the top monetary tiers.<br><br>
-Promising / Average: `r_score = 3, m_score ≥ 3` - Moderately recent customers with above-average historical spend.<br><br>
-Lost / Hibernating: `r_score ≤ 2, m_score ≤ 2` - Inactive customers in the bottom 40% for both recency and spend.<br><br>
-At Risk: `r_score ≤ 2, m_score ≥ 3` - Previously higher-spending customers who have become inactive.<br><br>
-General / Low Value: `ELSE` - Remaining customers with moderate/low recency and relatively low lifetime spend.<br>
+Champion: f_score ≥ 3, r_score ≥ 3, m_score ≥ 3 - Recent, frequent buyers with high lifetime spend; the most valuable cohort.<br><br>
+Loyal Customer: f_score ≥ 3 - Repeat buyers with 2+ orders who show strong purchasing engagement.<br><br>
+Cannot Lose Them: m_score = 5 - Top 20% lifetime spenders who have become dormant.<br><br>
+Recent / New Customer: r_score ≥ 4 - Recently active buyers who have not yet reached the top monetary tiers.<br><br>
+Promising / Average: r_score = 3, m_score ≥ 3 - Moderately recent customers with above-average historical spend.<br><br>
+Lost / Hibernating: r_score ≤ 2, m_score ≤ 2 - Inactive customers in the bottom 40% for both recency and spend.<br><br>
+At Risk: r_score ≤ 2, m_score ≥ 3 - Previously higher-spending customers who have become inactive.<br><br>
+General / Low Value: ELSE - Remaining customers with moderate/low recency and relatively low lifetime spend.<br>
 </details><br>
 
 
