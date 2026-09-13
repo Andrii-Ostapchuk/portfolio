@@ -7,7 +7,9 @@ title: Olist Data Warehouse
 
 # 📦 Olist E-Commerce Data Warehouse & Power BI Pipeline
 
-In this project I built an end-to-end Medallion pipeline transforming messy, multi-table e-commerce data into curated business objects and Power BI-ready reporting marts.
+In this project I built an end-to-end Medallion pipeline transforming messy, multi-table e-commerce data into curated business objects and Power BI-ready reporting marts.<br>
+
+View the project on [GitHub](https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project).
 
 ---
 
