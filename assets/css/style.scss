@@ -1,9 +1,0 @@
----
----
-@import "{{ site.theme }}";
-
-/* Hides all sidebar links pointing to GitHub */
-.sidebar a[href*="github.com"],
-.sidebar p.repo-owner {
-  display: none !important;
-}
