@@ -77,7 +77,7 @@ The warehouse follows a **Medallion Architecture** - four schemas, each serving 
 | Logistics cost | Freight-to-price ratio rises every **summer**, driven by bulky categories |
 | Satisfaction driver | Delivery delays hurt review scores **very strongly** - the #1 lever |
 | Payment mix | **Credit card** dominates nationally; Boleto is runner-up |
-| Seller health | Half of all sellers sit in lower-performing tiers - the biggest growth lever |
+| Seller health | Half of all seller-months sit in lower-performing tiers - the biggest growth lever |
 | Customer health | New customers are the largest group, but **At Risk / Lost / Cannot-Lose-Them** together outnumber loyal repeat buyers |
 | Revenue geography | **70%** of revenue comes from cross-state sales |
 | Top revenue profile | Early-delivered, cross-state orders from **Cannot Lose Them** customers paying in 7+ installments |
@@ -179,10 +179,10 @@ Seller performance varies meaningfully from month to month. Each **seller-month*
 
 See how Seller MoM Performance buckets were created:
 <details><summary>Performance classification</summary>
-Growth Leader: Monthly sales are above the seller's historical average **and** growing compared with the previous recorded month.<br>
-Cooling Off: Monthly sales are above the seller's historical average **but** declining compared with the previous recorded month.<br>
-Recovering: Monthly sales are below the seller's historical average **but** growing compared with the previous recorded month.<br>
-Underperforming: Monthly sales are below the seller's historical average **and** declining compared with the previous recorded month.<br>
+Growth Leader: Monthly sales are above the seller's historical average and growing compared with the previous recorded month.<br><br>
+Cooling Off: Monthly sales are above the seller's historical average but declining compared with the previous recorded month.<br><br>
+Recovering: Monthly sales are below the seller's historical average but growing compared with the previous recorded month.<br><br>
+Underperforming: Monthly sales are below the seller's historical average and declining compared with the previous recorded month.<br><br>
 Insufficient Data: First recorded active month, where no previous-month comparison is available.<br>
 </details><br>
 
@@ -202,13 +202,13 @@ Retention - not just acquisition - needs to be the priority, because most of the
 
 See how Customer buckets were created:
 <details><summary>Customer classification</summary>
-Champion: `f_score ≥ 3, r_score ≥ 3, m_score ≥ 3` - Recent, frequent buyers with high lifetime spend; the most valuable cohort.<br>
-Loyal Customer: `f_score ≥ 3` - Repeat buyers with 2+ orders who show strong purchasing engagement.<br>
-Cannot Lose Them: `m_score = 5` - Top 20% lifetime spenders who have become dormant.<br>
-Recent / New Customer: `r_score ≥ 4` - Recently active buyers who have not yet reached the top monetary tiers.<br>
-Promising / Average: `r_score = 3, m_score ≥ 3` - Moderately recent customers with above-average historical spend.<br>
-Lost / Hibernating: `r_score ≤ 2, m_score ≤ 2` - Inactive customers in the bottom 40% for both recency and spend.<br>
-At Risk: `r_score ≤ 2, m_score ≥ 3` - Previously higher-spending customers who have become inactive.<br>
+Champion: `f_score ≥ 3, r_score ≥ 3, m_score ≥ 3` - Recent, frequent buyers with high lifetime spend; the most valuable cohort.<br><br>
+Loyal Customer: `f_score ≥ 3` - Repeat buyers with 2+ orders who show strong purchasing engagement.<br><br>
+Cannot Lose Them: `m_score = 5` - Top 20% lifetime spenders who have become dormant.<br><br>
+Recent / New Customer: `r_score ≥ 4` - Recently active buyers who have not yet reached the top monetary tiers.<br><br>
+Promising / Average: `r_score = 3, m_score ≥ 3` - Moderately recent customers with above-average historical spend.<br><br>
+Lost / Hibernating: `r_score ≤ 2, m_score ≤ 2` - Inactive customers in the bottom 40% for both recency and spend.<br><br>
+At Risk: `r_score ≤ 2, m_score ≥ 3` - Previously higher-spending customers who have become inactive.<br><br>
 General / Low Value: `ELSE` - Remaining customers with moderate/low recency and relatively low lifetime spend.<br>
 </details><br>
 
