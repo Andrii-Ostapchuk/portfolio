@@ -159,26 +159,34 @@ In simple words: the more orders a seller handles, the more "just okay" reviews 
 * **Quantified Value:** "Needs Improvement" share rises with volume (23% → 38%), while "Bad" share falls (13% → 1%)
 * **Business Metric:** Seller Volume × Review Score quadrant (High/Medium/Low volume × Excellent/Needs Improvement/Bad)
 
-
-See how sellers were distributed into buckets:
-<details>
+See how Volume and Rating buckets were created:
+<details><summary>Volume & Rating classification</summary>
 Order Volume: High Volume (>200), Medium Volume (51-200), Low Volume (<=50).<br>
 Satisfaction Rating: Excellent (>=4.0), Needs Improvement (3.0-3.99), Bad (<3.0).<br>
-</details><br><br>
+</details><br>
 
-As sellers handle more orders, the share of merely "needs improvement" reviews rises - but, surprisingly, the share of outright "bad" reviews falls. **Open question: why?** (See Caveats.)
+As sellers handle more orders, the share of merely "needs improvement" reviews rises - but, surprisingly, the share of outright "bad" reviews falls. **Open question: why?** (See [Caveats](#caveats).)
 
 ![Seller Volume vs Review Score Matrix](../../assets/photos/insight_6.png)
 Graph 6: *Seller Volume vs Review Score Matrix*
 
 <div style="margin-bottom: 50px;"></div>
 
-#### <a id="insight-7"></a>Insight 7: Half the Seller Base Is a Growth Opportunity Waiting to Happen
-"Cooling Off" sellers are the fastest path to more Leaders; "Recovering" and "Underperforming" sellers are the biggest lever for overall platform revenue.
-* **Quantified Value:** Cooling Off sellers are **2x** as numerous as Leaders (with slightly higher avg sales); Recovering + Underperforming make up **~50%** of sellers with **60%+ lower** average sales
-* **Business Metric:** Seller Performance tiers - Avg Sales (AS) by tier (Growth Leader, Cooling Off, Recovering, Underperforming)
+#### <a id="insight-7"></a>Insight 7: Seller Performance Shifts Across Monthly Health Tiers
+Seller performance varies meaningfully from month to month. Each **seller-month** is classified by comparing that month's sales with the seller's historical average monthly sales and with their previous recorded month's sales.
+* **Quantified Value:** Cooling Off seller-months are **2x** less numerous than Growth Leaders seller-months (with slightly higher avg sales); Recovering + Underperforming make up **~50%** of seller-months with **60%+ lower** average sales
+* **Business Metric:** Seller Monthly Performance tiers - Avg Sales by tier (Growth Leader, Cooling Off, Recovering, Underperforming)
 
-Leader sellers give the platform a solid revenue base. Cooling Off sellers already perform nearly as well and are numerous - a natural pipeline into the Leader tier. Recovering and Underperforming sellers make up half the base by count but contribute far less revenue each - the single biggest opportunity to lift overall platform sales.
+See how Seller MoM Performance buckets were created:
+<details><summary>Performance classification</summary>
+Growth Leader: Monthly sales are above the seller's historical average **and** growing compared with the previous recorded month.<br>
+Cooling Off: Monthly sales are above the seller's historical average **but** declining compared with the previous recorded month.<br>
+Recovering: Monthly sales are below the seller's historical average **but** growing compared with the previous recorded month.<br>
+Underperforming: Monthly sales are below the seller's historical average **and** declining compared with the previous recorded month.<br>
+Insufficient Data: First recorded active month, where no previous-month comparison is available.<br>
+</details><br>
+
+Leader seller-months give the platform a solid revenue base. Cooling Off seller-months already perform nearly as well but are not such numerous - a natural pipeline into the Leader tier. Recovering and Underperforming sellers make up half the base by count but contribute far less revenue each - the single biggest opportunity to lift overall platform sales.
 
 ![Seller Performance Health Tiers](../../assets/photos/insight_7.png)
 Graph 7: *Seller Performance Health Tiers*
@@ -188,9 +196,22 @@ Graph 7: *Seller Performance Health Tiers*
 ### 👥 Customers
 
 #### <a id="insight-8"></a>Insight 8: The Customer Base Is Skewed Toward Risk
-Retention - not just acquisition - needs to be the priority, because most of the "next tier" of customers are disengaged, not loyal.
+Retention - not just acquisition - needs to be the priority, because most of the customers are disengaged, not loyal.
 * **Quantified Value:** New Customers: 31%, Cannot Lose Them: 18%, Lost: 16%, At Risk: 15%, Low Value/Promising: 8%, Champions: 1.9%, Loyal: 1.2% (rounded)
 * **Business Metric:** RFM Segmentation (Recency, Frequency, Monetary)
+
+See how Customer buckets were created:
+<details><summary>Customer classification</summary>
+Champion: `f_score ≥ 3, r_score ≥ 3, m_score ≥ 3` - Recent, frequent buyers with high lifetime spend; the most valuable cohort.<br>
+Loyal Customer: `f_score ≥ 3` - Repeat buyers with 2+ orders who show strong purchasing engagement.<br>
+Cannot Lose Them: `m_score = 5` - Top 20% lifetime spenders who have become dormant.<br>
+Recent / New Customer: `r_score ≥ 4` - Recently active buyers who have not yet reached the top monetary tiers.<br>
+Promising / Average: `r_score = 3, m_score ≥ 3` - Moderately recent customers with above-average historical spend.<br>
+Lost / Hibernating: `r_score ≤ 2, m_score ≤ 2` - Inactive customers in the bottom 40% for both recency and spend.<br>
+At Risk: `r_score ≤ 2, m_score ≥ 3` - Previously higher-spending customers who have become inactive.<br>
+General / Low Value: `ELSE` - Remaining customers with moderate/low recency and relatively low lifetime spend.<br>
+</details><br>
+
 
 New customers form the largest group - but the next three largest are **Cannot Lose Them**, **Lost**, and **At Risk**, not repeat loyal buyers. The base is fragile, and losing these segments would hurt more than the new-customer pipeline can offset.
 
@@ -218,7 +239,7 @@ This is a small but extremely valuable customer profile worth understanding and 
 * **Quantified Value:** This profile represents **12%** of Total Net Revenue
 * **Business Metric:** Total Net Revenue by delivery-speed × cross-state × customer segment × installment count
 
-The single biggest source of net revenue is orders that arrive **6+ days early**, ship **cross-state**, are placed by **Cannot Lose Them** customers, and are paid in **7+ installments** - a specific, high-value combination worth targeting directly.
+The single biggest source of net revenue is orders that arrive **6+ days early**, ship **cross-state**, are placed by **Cannot Lose Them** customers, and are paid in **7+ installments** - a specific, high-value combination worth targeting directly, additionally indicating at the importance of preserving **Cannot Lose Them** customers.
 
 ![High-Value Order Profile Analysis](../../assets/photos/insight_10.png)
 Graph 10: *High-Value Order Profile Analysis*
@@ -228,8 +249,8 @@ Graph 10: *High-Value Order Profile Analysis*
 ## 5. Recommendations
 
 **Sellers**
-- Build a "graduation" program to help **Cooling Off** sellers cross into the **Leader** tier - they're already close on average sales [*(→ Insight 7)*](#insight-7).
-- Prioritize support (training, promotion tools, logistics help) for **Recovering** and **Underperforming** sellers, since they represent half the seller base but a fraction of the revenue [*(→ Insight 7)*](#insight-7).
+- Build a "graduation" program to help sellers with a lot of **Cooling Off** months cross into the **Leader** tier - they're already close on average sales [*(→ Insight 7)*](#insight-7).
+- Prioritize support (training, promotion tools, logistics help) for sellers with plentiful **Recovering** and **Underperforming** months, since they represent half the seller-month base but a fraction of the revenue [*(→ Insight 7)*](#insight-7).
 - Investigate *why* high-volume sellers get more "needs improvement" but fewer "bad" reviews - e.g. via review-text analysis - before designing a fix [*(→ Insight 6)*](#insight-6).
 
 **Customers**
@@ -248,13 +269,12 @@ Graph 10: *High-Value Order Profile Analysis*
 
 ---
 
-## 6. Caveats & Assumptions
+## 6. <a id="caveats"></a>Caveats & Assumptions
 
 - **Dataset scope:** Olist's data reflects the Brazilian marketplace only, over Sep 2016 – Sep 2018; findings may not generalize to other markets, countries, or time periods.
 - **Currency:** All monetary figures are in Brazilian Real (BRL) unless stated otherwise.
 - **Small-sample caveat:** The RR/boleto finding ([*Insight 5*](#insight-5)) is based on just **0.05% of all orders** - interesting, but not statistically robust enough to act on.
 - **Freight-to-price threshold:** The `> 0.18` cutoff used to flag "high" freight ratio orders is a judgment call, not an industry standard.
 - **RFM scoring:** Recency and Monetary scores are quintile-based (1–5), calculated **relative to this dataset's own population** - they are not universal benchmarks and would shift if applied to a different customer base or time window.
-- **Seller tier thresholds:** Sellers are grouped by order volume - **High Volume**: more than 200 orders, **Medium Volume**: 51–200 orders, **Low Volume**: 50 or fewer orders - and separately by average review score - **Excellent**: 4.0 or higher, **Needs Improvement**: 3.0–3.99, **Bad**: below 3.0.
 - **Open question:** Why high-volume sellers see more "needs improvement" but fewer "bad" reviews ([*Insight 6*](#insight-6)) is unresolved in this analysis - it would benefit from qualitative follow-up, e.g. review-text sentiment analysis.
 - **Delivery delay definition:** "Delayed" is calculated as actual delivery date minus estimated delivery date.
