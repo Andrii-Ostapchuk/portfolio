@@ -159,11 +159,11 @@ In simple words: the more orders a seller handles, the more "just okay" reviews 
 * **Quantified Value:** "Needs Improvement" share rises with volume (23% → 38%), while "Bad" share falls (13% → 1%)
 * **Business Metric:** Seller Volume × Review Score quadrant (High/Medium/Low volume × Excellent/Needs Improvement/Bad)
 
+
 See how sellers were distributed into buckets:
 <details>
-  xxx
-  xxx
-  xxx
+Order Volume: High Volume (>200), Medium Volume (51-200), Low Volume (<=50).<br>
+Satisfaction Rating: Excellent (>=4.0), Needs Improvement (3.0-3.99), Bad (<3.0).<br>
 </details>
 
 As sellers handle more orders, the share of merely "needs improvement" reviews rises - but, surprisingly, the share of outright "bad" reviews falls. **Open question: why?** (See Caveats.)
