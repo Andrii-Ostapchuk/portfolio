@@ -3,3 +3,5 @@ title: Data Analytics Portfolio
 logo: https://github.com/Andrii-Ostapchuk.png
 description: End-to-end case studies in SQL, Power BI, and Python.
 show_downloads: false
+github:
+  repository_url: https://github.com/Andrii-Ostapchuk/sql-data-warehouse-project
